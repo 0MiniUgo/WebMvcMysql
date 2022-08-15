@@ -1,0 +1,15 @@
+services: 
+  db:
+    image: mysql
+    container_name: mysql_csharptest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      
+    ports:
+      - "3306:3306"
+    volumes:
+      - csharptest_data:/var/lib/csharptest_data
+    mem_limit: 512m
+    
+volumes:
+  csharptest_data:
